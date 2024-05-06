@@ -1,0 +1,168 @@
+pwd wd--0D73Hshv
+email mr.owais@trendbreaker.co.uk
+
+
+Core Requirements:
+	Script CLI based able to scan SPF, DMARC, DKIM Industry-level domains
+	and generate the report with suggestions and provide information
+	that domain is vulnerable or not and which of the protocol is not
+	configured properly.
+
+	Generate the Research-Based Paper on the above protocol
+	almost 10 or 11 pages
+
+
+	
+--> Iteration
+	First Iteration of Development
+		Provide you script able to scan the SPF, DMARC, DKIM protocols
+		Number of days
+			- 4 days from 14 March to 17 March
+		
+	
+	Second Iteration 
+		Provide you script able to suggest arguments on the basis of Scanning Results
+		Number of days
+			- 4 days from 18, March to 23 March - WeekEnd Excluded
+	
+	Third Iteration
+		Provide you the Script able to scan domain and response back with 
+		Number of days
+			- 4 days from 24, March to 30 March - WeekEnd Excluded
+
+	Testing and Final Deployment:
+		Provide End-Product with JSON Object and after third Iteration client
+		should have to define which file format is required
+
+		Preffered File Formats PDF, CSV 
+
+
+
+
+
+--> Senerio
+	Authentication refer to “the process or action of proving or showing something to be true, genuine, or valid.”
+	So in to provide security We use Sender Policy Framework, Domain Keys Identified Mails, Domain Based Message
+	Authentications (SPF, DKIM and DMARC) in order to gain to prevention from flood attacks, Spoofed Emails
+	and provide Confidentiality, Integrith and Avalaiblity.
+
+	Now Our Script takes the mulitple doamins on terminal or in form of txt file Formats
+	after taking the paramters it moves towards the scanning process.
+
+	After scanning it gennerate the information in the form of JSON and provide the final report
+	on client defined format like PDF and CSV.
+
+--> Features
+	Our script contains the following features:
+		- Able to scan Domain one by one verbosely
+		- Take parameters in form of text and terminal based
+		- If user want to scan specific protocol that
+			it is able to deal with it
+		- Able to provide the number of host working on that domains
+		- Show the warnings if not configured properly
+		- Show the mechanism of protcols
+		- Represents the domain is valid or not
+		- It will provide the proper report form of PDF and CSV
+
+--> Working Behaviour
+
+	SPF and DKIM are both protocls that are based validations of Sender content and headers of
+	emails in order to test the integrity of emails, DMARC is head and test these protocols are 
+	working not so as per Senerio Our script will work as it is. Like first it validates that 
+	SPF is working or not after that it test the DKIM protocl so after validations of both we 
+	use here the api to test the both on run using aysnc programming so this concise way of 
+	elaborating the working behaviour
+
+
+--> Time Span
+	
+	Our time span of this project is 16 working days
+	Three tenors with 4 days
+	and last tenor of testing and documentation stuff take
+	4 days in order to deploy all things 
+	in agile way
+
+	From 14 March, 2022 - 5th April 2022
+
+
+--> Technology Used
+
+	We use Python3.0 and its Framework in order deploy
+	on client demands and Although it hybird, multiparadigm 
+	programming language and very flexible and versitle
+	
+--> Output
+
+
+		Ex: After Third Iteration the Expected Output
+
+		JSON object with
+		
+		{
+			"domain": "domain_Name",
+			"dnssec": true,	
+			"hostnames":[
+				host_1,
+				host_2
+				host_x
+			]
+
+			warnings:[Depends Upon Scanning]
+			  "spf": {
+				"record": "v=spf1 +mx ip4:ipv_4 of scanning obeject -all",
+				"valid": true,
+				"dns_lookups": 1,
+				"warnings": [],
+				"parsed": {
+				"pass": [
+						{
+						  "value": "test.domain",
+						  "mechanism": "mx"
+						},
+			
+				"fail": [
+	                                        {
+	                                          "value": "test.domain",
+	                                          "mechanism": "mx"
+						}
+				
+				Same for DKIM and DMARC protcols vice versa
+		}
+
+--> OutComes:
+	Json:
+		SPF --> Vulnerbility
+		DMARC --> 
+		DKIM --> 
+
+		SPF --> Suggesstion
+		DMARC --> 
+		DKIM --> 
+
+What is DKIM Selector?
+
+	What is DomainKeys/DKIM Selector
+	To support multiple concurrent public keys per sending domain, the DNS namespace is further subdivided with "selectors". Selectors are arbitrary names below the "_domainkey." namespace. For example, selectors may indicate the names of your server locations (e.g., "mta1", "mta2", and "mta2"
+	), the signing date (e.g., "january2005", "february2005", etc.), or 
+	even the individual user.
+
+	The most important thing is: selector indicates your DomainKeys/DKIM 
+	public key location. 
+	For example: if your domain selector is: "s1024", 
+	your public key record will be "s1024._domainkey.yourdomain"; 
+	if your domain selector is: "mta1", your public key record will be 
+	"mta1._domainkey.yourdomain".
+
+
+Resources:
+
+	-> https://www.thierolf.org/blog/2021/small-python-script-to-quick-test-dmarc-dkim-and-spf-records/
+	-> https://pypi.org/project/pyspf/
+	-> https://pypi.org/project/dkimpy/
+	-> https://python.hotexamples.com/examples/dkim/-/verify/python-verify-function-examples.html
+	-> https://github.com/domainaware/checkdmarc
+
+
+
+
+
